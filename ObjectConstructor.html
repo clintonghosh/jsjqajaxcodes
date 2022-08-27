@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Constructor</title>
+</head>
+<body>
+    <!-- External JS File -->
+    <script type="text/javascript" src="ExternalJs.js"></script>
+    <script>
+        oc=new ObjectConstructor(1,"Zhanzuo",40000)
+        document.write("Emp Id: "+oc.id+"\n Emp Name: "+oc.name+"\n Emp Salary: "+oc.salary+"<br>")
+        oc.changeSalary(950000)
+        document.write("Emp Id: "+oc.id+"\n Emp Name: "+oc.name+"\n Emp Salary: "+oc.salary+"<br>")
+        //reloadPage()
+    </script>
+</body>
+</html>
