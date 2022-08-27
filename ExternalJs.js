@@ -214,7 +214,18 @@ function reloadPage(){
     }, 1000)
 }
 
+// JS Date
+function datesDatatype(){
+    var date = new Date();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    alert(hour+":"+minutes+":"+seconds)
+}
+
 // Arrow Functions
 var arrowFunction = () =>{
      alert('Im Arrow Function')
 }
+
+
