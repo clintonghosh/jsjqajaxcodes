@@ -228,4 +228,59 @@ var arrowFunction = () =>{
      alert('Im Arrow Function')
 }
 
+// Math  Functions
+var mathFunctions = () =>{
+    alert("Absolute Value: "+Math.abs(15.65));
+    alert("SQRT Value: "+Math.sqrt(15));
+    alert("Floor Value: "+Math.floor(4.6));
+    alert("Ceil Value: "+Math.ceil(4.6));
+    alert("Round Value: "+Math.round(4.3));
+}
+
+// Browser Object Model
+var browserObjectModel = () =>{
+    window.alert("Window Objects Upcoming");
+    confirmBox();
+    closeJS();
+    window.alert("History Objects Upcoming");
+    historyObjects();
+}
+
+var confirmBox = () =>{
+    var v= confirm("Are u sure?");  
+    if(v==true){  
+        alert("ok");  
+        }  
+        else{  
+        alert("cancel");  
+    }  
+}
+
+var setTimeoutJS = () =>{  
+    setTimeout(  
+        function(){  
+            alert("Welcome to Javatpoint after 2 seconds")  
+        },2000);  
+}
+
+var closeJS = () =>{  
+    var openedUrl = window.open("https://www.w3schools.com", "_blank", "width=1000, height=1000"); // Open Function in javascript
+    setTimeout(function(){
+       openedUrl.close();
+    },1000);
+    // openedUrl.close();
+}
+
+var historyObjects = () =>{
+    // Can be Upgradable
+    history.back();  
+    history.forward();
+    history.go(-2);
+    history.go(2);
+}
+
+
+
+
+
 
