@@ -351,7 +351,6 @@ var documentObjectModel = () => {
     getbyname()
     getbytagname()
     innerhtmlfunc()
-
 }
 
 var getbyID = () => {
@@ -395,10 +394,20 @@ var checkstrength = () =>{
         location.reload()
     }, 6000);
 }
-
-
-
-
-
-
-
+//cookies
+// create, read, update and delete a cookie by using document.cookie property.
+function setcookie(){
+    var name = document.getElementById("nm").value
+    var date = new Date()
+    console.log(date.getHours());
+    document.cookie = `name=${name};expires=Sun, ${date.getDate()} Aug 2022 ${date.getHours()}:${date.getMinutes()+1}:00 UTC` 
+    //length is less then equal 5 because length of `name=` is 5. 
+    if (document.cookie.length<=5) {
+        alert("no cookies available Enter name")
+    } else {
+        alert("Cookie set as: "+document.cookie)
+    }
+}
+function delcookie() {
+    document.cookie=document.cookie+";max-age=0";  
+}
