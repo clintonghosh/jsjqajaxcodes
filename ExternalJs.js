@@ -1,17 +1,17 @@
 var Name = "Michael Clinton"
 
-function message(){
+function message() {
     alert("How are You ?");
 }
 
 // Alert by taking input from the user.
-function newMessageName(){
-     var nm = document.getElementById("nm").value;
-      alert("Your Name is: "+nm)
+function newMessageName() {
+    var nm = document.getElementById("nm").value;
+    alert("Your Name is: " + nm)
 }
 
 // Reload Page after 5 Secs.
-function reLoadPage(){
+function reLoadPage() {
     // A const variable cannot be reassigned
     const myTimeout = setTimeout(reloader, 5000);
     function reloader() {
@@ -20,7 +20,7 @@ function reLoadPage(){
 }
 
 // Document.write method and reload after 1 sec
-function documentWriteSample(){
+function documentWriteSample() {
     document.write("<h2>Hello World!</h2><p>Have a nice day!</p>");
     const myTimeout = setTimeout(reloader, 1000);
     function reloader() {
@@ -29,216 +29,216 @@ function documentWriteSample(){
 }
 
 // Reload page after 2 Secs
-function practiceReload(){
-    const timeOut = setTimeout(reloader,2000);
+function practiceReload() {
+    const timeOut = setTimeout(reloader, 2000);
 
-    function reloader(){
+    function reloader() {
         location.reload(); // Reload is a Function use parenthesis
     }
 
 }
 
 // Local Variable
-function localVariable(){
+function localVariable() {
     var name = "Michael";
-    alert("Local Variable: "+name);
+    alert("Local Variable: " + name);
 }
 
 // Global Variable
-function globalVariable(){
-    alert("Global Variable: "+Name);
+function globalVariable() {
+    alert("Global Variable: " + Name);
     localVariable();        // Calling localVariable Function
 }
 
 // Window.value Global Variable
-function globalVariableTyp(){
+function globalVariableTyp() {
     window.value = 90;
-    window.temporary = 199;  
+    window.temporary = 199;
     WindowValue();        // Calling localVariable Function
 }
 
 // Alert Window Value
-function WindowValue(){
-    alert("Window Object Value: "+window.value);
-    alert("Window Object Temporary: "+window.temporary);
+function WindowValue() {
+    alert("Window Object Value: " + window.value);
+    alert("Window Object Temporary: " + window.temporary);
 }
 
 // Primitive DataTypes
-function primitiveDataTypes(){
+function primitiveDataTypes() {
     var str = "Hello"
     var num1 = 12
     var num2 = 11.5
     var nullValue = null
-    alert("String Datatype: "+str+"\n Number: "+num1+" \n Float: "+num2+" \n Null Value: "+nullValue)
+    alert("String Datatype: " + str + "\n Number: " + num1 + " \n Float: " + num2 + " \n Null Value: " + nullValue)
 }
 
 // JS Arithmetic Operators
-function arithmeticOperators(){
+function arithmeticOperators() {
     var a = 50;
     var b = 100;
-    alert("Addition: "+(a+b)+" \nSubtraction: "+(a-b)+"\nMultiplication: "+(a*b)+"\nModulus: "+(a%b)+
-    "\nDivision: "+(a/b)+"\nIncrement: "+(a++)+"\nDecrement: "+(b--))
-    alert("After Increment: "+(a)+"\nAfter Decrement: "+(b))
+    alert("Addition: " + (a + b) + " \nSubtraction: " + (a - b) + "\nMultiplication: " + (a * b) + "\nModulus: " + (a % b) +
+        "\nDivision: " + (a / b) + "\nIncrement: " + (a++) + "\nDecrement: " + (b--))
+    alert("After Increment: " + (a) + "\nAfter Decrement: " + (b))
 }
 
 // Switch Case
-function switchCase(){
+function switchCase() {
     var cs = "Thursday"
     var result = "null"
-    switch(cs){
+    switch (cs) {
         case 'Thursday':
             result = cs
-            alert("Its "+result)
+            alert("Its " + result)
     }
 }
 
 // for loop
-function forLoop(){
-    for(i=0;i<4;i++){
-        document.write(i+"<br>")
+function forLoop() {
+    for (i = 0; i < 4; i++) {
+        document.write(i + "<br>")
     }
-    const load = setTimeout(function loader(){
+    const load = setTimeout(function loader() {
         location.reload()
     }, 2000)
 }
 
 // While Loop
-function whileLoop(){
+function whileLoop() {
     var i = 1;
-    while(i<=15){
-        document.write(i+"<br>");
+    while (i <= 15) {
+        document.write(i + "<br>");
         i++;
     }
-    const load = setTimeout(function loader(){
+    const load = setTimeout(function loader() {
         location.reload()
     }, 2000)
 }
 
 // Do Loop
-function doLoop(){
+function doLoop() {
     var i = 1;
-    do{
-        document.write(i+"<br>");
+    do {
+        document.write(i + "<br>");
         i++;
-    }while(i>=15)
-    const load = setTimeout(function loader(){
+    } while (i >= 15)
+    const load = setTimeout(function loader() {
         location.reload()
     }, 2000)
 }
 
 // JS Return Keyword
-function returner(){
+function returner() {
     return "Hello World"
-    const load = setTimeout(function loader(){
+    const load = setTimeout(function loader() {
         location.reload()
     }, 1000)
 }
 
 // Single Line Function
-var add = new Function("num1","num2","return num1*num2");
-function adder(){
-    document.write(add(2,8))
+var add = new Function("num1", "num2", "return num1*num2");
+function adder() {
+    document.write(add(2, 8))
 }
 
 // Objects in Javascript {
 // Create Object By Literal
-function objectByLiteral(){
-   emp = {Id:1,Name:"Shashank",Salary:40000}
-   document.write("Emp Id: "+emp.Id+"\n Emp Name: "+emp.Name+"\n Emp Salary: "+emp.Salary)
-   reloadPage()
+function objectByLiteral() {
+    emp = { Id: 1, Name: "Shashank", Salary: 40000 }
+    document.write("Emp Id: " + emp.Id + "\n Emp Name: " + emp.Name + "\n Emp Salary: " + emp.Salary)
+    reloadPage()
 }
 
 // Create Instance of Object
- function instanceOfObject(){
+function instanceOfObject() {
     var emp = new Object()
     emp.id = 1
     emp.name = "Michael Clinton"
     emp.salary = 40000
-    document.write("Emp Id: "+emp.id+"\n Emp Name: "+emp.name+"\n Emp Salary: "+emp.salary)
+    document.write("Emp Id: " + emp.id + "\n Emp Name: " + emp.name + "\n Emp Salary: " + emp.salary)
     reloadPage()
- }
+}
 
 
- function ObjectConstructor(id, name, salary){
-    this.id=id
-    this.name=name
-    this.salary=salary
+function ObjectConstructor(id, name, salary) {
+    this.id = id
+    this.name = name
+    this.salary = salary
     this.changeSalary = changeSalary
-    function changeSalary(otherSalary){
+    function changeSalary(otherSalary) {
         this.salary = otherSalary
     }
- }
- //}
+}
+//}
 
- // Array By ArrayLiteral
- function arrayLiteral(){
-    var names = ["Zhong","Zhang","Wang"]
-    for(i=0;i<names.length;i++){
-        document.write(names[i]+"<br>")
+// Array By ArrayLiteral
+function arrayLiteral() {
+    var names = ["Zhong", "Zhang", "Wang"]
+    for (i = 0; i < names.length; i++) {
+        document.write(names[i] + "<br>")
     }
- }
+}
 
- // Using new Keyword
- function byNewKeyword(){
+// Using new Keyword
+function byNewKeyword() {
     var names = new Array()
     names[0] = "Fresh"
     names[1] = "To"
     names[2] = "Home"
-    for(i=0;i<names.length;i++){
-        document.write(names[i]+"<br>")
+    for (i = 0; i < names.length; i++) {
+        document.write(names[i] + "<br>")
     }
     reloadPage()
- }
+}
 
- // Using JS Array Constructor
- function arrayConstructor(){
-    var names = new Array("Fresh","To","Home")
-    for(i=0;i<names.length;i++){
-        document.write(names[i]+"<br>")
+// Using JS Array Constructor
+function arrayConstructor() {
+    var names = new Array("Fresh", "To", "Home")
+    for (i = 0; i < names.length; i++) {
+        document.write(names[i] + "<br>")
     }
     reloadPage()
- }
+}
 
- // JS Strings
- function stringExample(){
+// JS Strings
+function stringExample() {
     var str1 = "Hello"
     var str2 = new String("World");
-    document.write("String1: "+str1+" String 2: "+str2)
+    document.write("String1: " + str1 + " String 2: " + str2)
     reloadPage()
- }
+}
 
 // Function to Reload Page
-function reloadPage(){
-    const load = setTimeout(function loader(){
+function reloadPage() {
+    const load = setTimeout(function loader() {
         location.reload()
     }, 1000)
 }
 
 // JS Date
-function datesDatatype(){
+function datesDatatype() {
     var date = new Date();
     var hour = date.getHours();
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
-    alert(hour+":"+minutes+":"+seconds)
+    alert(hour + ":" + minutes + ":" + seconds)
 }
 
 // Arrow Functions
-var arrowFunction = () =>{
-     alert('Im Arrow Function')
+var arrowFunction = () => {
+    alert('Im Arrow Function')
 }
 
 // Math  Functions
-var mathFunctions = () =>{
-    alert("Absolute Value: "+Math.abs(15.65));
-    alert("SQRT Value: "+Math.sqrt(15));
-    alert("Floor Value: "+Math.floor(4.6));
-    alert("Ceil Value: "+Math.ceil(4.6));
-    alert("Round Value: "+Math.round(4.3));
+var mathFunctions = () => {
+    alert("Absolute Value: " + Math.abs(15.65));
+    alert("SQRT Value: " + Math.sqrt(15));
+    alert("Floor Value: " + Math.floor(4.6));
+    alert("Ceil Value: " + Math.ceil(4.6));
+    alert("Round Value: " + Math.round(4.3));
 }
 
 // Browser Object Model
-var browserObjectModel = () =>{
+var browserObjectModel = () => {
     window.alert("Window Objects Upcoming");
     confirmBox();
     closeJS();
@@ -246,38 +246,101 @@ var browserObjectModel = () =>{
     historyObjects();
 }
 
-var confirmBox = () =>{
-    var v= confirm("Are u sure?");  
-    if(v==true){  
-        alert("ok");  
-        }  
-        else{  
-        alert("cancel");  
-    }  
+var confirmBox = () => {
+    var v = confirm("Are u sure?");
+    if (v == true) {
+        alert("ok");
+    }
+    else {
+        alert("cancel");
+    }
 }
 
-var setTimeoutJS = () =>{  
-    setTimeout(  
-        function(){  
-            alert("Welcome to Javatpoint after 2 seconds")  
-        },2000);  
+var setTimeoutJS = () => {
+    setTimeout(
+        function () {
+            alert("Welcome to Javatpoint after 2 seconds")
+        }, 2000);
 }
 
-var closeJS = () =>{  
+var closeJS = () => {
     var openedUrl = window.open("https://www.w3schools.com", "_blank", "width=1000, height=1000"); // Open Function in javascript
-    setTimeout(function(){
-       openedUrl.close();
-    },1000);
+    setTimeout(function () {
+        openedUrl.close();
+    }, 1000);
     // openedUrl.close();
 }
 
-var historyObjects = () =>{
+var historyObjects = () => {
     // Can be Upgradable
-    history.back();  
+    history.back();
     history.forward();
     history.go(-2);
     history.go(2);
 }
+
+// Dom 
+var documentObjectModel = () => {
+    getbyID()
+    getbyname()
+    getbytagname()
+    innerhtmlfunc()
+
+}
+
+
+
+
+var getbyID = () => {
+    var byid = document.getElementById("byid").value
+    alert("getElement By id" + byid)
+}
+
+var getbyname = () => {
+    var byanimalname = document.getElementsByName("animal")
+    var byfishname = document.getElementsByName("fish")
+    alert("There are " + byanimalname.length + "  elements having name animal")
+    alert("There are " + byfishname.length + "  elements having name fish")
+}
+
+var getbytagname = () => {
+    var totalpara = document.getElementsByTagName("p")
+    alert("There are total " + totalpara.length + " paragraphs")
+}
+var innerhtmlfunc = () => {
+    var para = document.getElementById("myp").innerHTML
+    var mylist = document.getElementById("myList").innerHTML
+    document.getElementById("showdetails").innerHTML = "i am the value of id p5: " + para +" the value of list is: " + mylist 
+    setTimeout(() => {
+        location.reload()
+    }, 5000);
+}
+//innerText 
+var checkstrength = () =>{
+    var strengthmsg;
+    var innertextvalue = document.getElementById("innertext").value
+    if(innertextvalue.length<5 || innertextvalue.length==0 ){
+        strengthmsg = "Poor";
+        document.getElementById("strength").innerText=strengthmsg;
+    }
+    else{
+        strengthmsg = "Good";
+        document.getElementById("strength").innerText=strengthmsg;
+    }
+    setTimeout(() => {
+        location.reload()
+    }, 6000);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

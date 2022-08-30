@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script type="text/javascript" src="ExternalJs.js"></script>
+</head>
+
+<body>
+    <!-- Keeping input field static(disabled) for making it static -->
+    <form id="domform">
+        <input type="text" id="byid" placeholder="Get element by ID" disabled><br>
+        <input type="text" name="pass" id="innertext" placeholder="Enter password" onkeypress="checkstrength()"><br>
+        <span id="strength"></span><br>
+        Cats:
+        <input name="animal" type="checkbox" value="Cats">
+        Dogs:
+        <input name="animal" type="checkbox" value="Dogs">
+        Tuna:
+        <input name="fish" type="checkbox" value="Tuna">
+        Prawns
+        <input name="fish" type="checkbox" value="Prawns">
+        squid
+        <input name="fish" type="checkbox" value="Prawns"><br>
+        <p> i am para1 </p>
+        <p> i am para2 </p>
+        <p id="myp">i am para3. Thankyou</p>    
+        <ul id="myList">My list
+            <li>item1</li>
+            <li>item2</li>
+        </ul>
+        <p id="showdetails"></p>
+        <input type="button" value="Submit" onclick="documentObjectModel()">
+    </form>
+
+
+</body>
+
+</html>
