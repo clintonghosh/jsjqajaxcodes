@@ -279,6 +279,72 @@ var historyObjects = () => {
     history.go(2);
 }
 
+var validateForm = () =>{
+    var name = document.myform.name.value;
+    var password = document.myform.password.value;
+
+    if(name==null || name==""){
+        alert("Name can't be blank");
+        return false;
+    }else if(password.length<6){
+        alert("Password characters can't be below 6");
+        return false;
+    }
+}
+
+// Validate Email
+var ValidateEmail = () =>{
+     var emailId = document.myform.email.value;
+     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myform.email.value))
+      {
+        return (true)
+      }else{
+        alert("You have entered an invalid email address!")
+        return (false)
+      }
+}
+
+class Employee{
+    // Class cannot be Redeclared.
+    // Classes should be declared before invoking them.
+    constructor(id,name){
+        this.id = id;
+        this.name = name;
+    }
+
+    details(){
+        return this.name;
+    }
+
+    goBack(){
+        setTimeout(function(){
+            reloadPage();
+         },1000);
+    }
+}
+
+// Constructors in JS
+var ConstructorJS = () =>{
+    var e1 = new Employee(1,"Caught DJango Scam");
+    document.write("Details: "+e1.details());
+    e1.goBack();
+}
+
+// The class can be expressed without assigning any name to it.
+var Emp = class{
+    Emp(id, name){
+        this.id=id;
+        this.name=name;
+        document.write("Name: "+this.name);
+    }
+}
+
+// Calling nameLess Class
+var noNameClass = () =>{
+    new Emp(1,"Hostel");
+    document.write(Emp.name);
+}
+
 // Dom 
 var documentObjectModel = () => {
     getbyID()
@@ -287,9 +353,6 @@ var documentObjectModel = () => {
     innerhtmlfunc()
 
 }
-
-
-
 
 var getbyID = () => {
     var byid = document.getElementById("byid").value
@@ -315,7 +378,8 @@ var innerhtmlfunc = () => {
         location.reload()
     }, 5000);
 }
-//innerText 
+
+// InnerText 
 var checkstrength = () =>{
     var strengthmsg;
     var innertextvalue = document.getElementById("innertext").value
@@ -331,15 +395,6 @@ var checkstrength = () =>{
         location.reload()
     }, 6000);
 }
-
-
-
-
-
-
-
-
-
 
 
 
