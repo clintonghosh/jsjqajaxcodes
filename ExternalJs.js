@@ -415,8 +415,10 @@ function display(firstName, lastName){
      this.lastName = lastName;
 }
 
+display.prototype.company = "MNC";
+
 display.prototype.fullname = function(){
-    return this.firstName+" "+this.lastName;
+    return this.firstName+" "+this.lastName+" "+this.company;
 }
 
 var prototypeFunction = () =>{
