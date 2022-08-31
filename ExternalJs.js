@@ -279,6 +279,8 @@ var historyObjects = () => {
     history.go(2);
 }
 
+// Form Validation
+
 var validateForm = () =>{
     var name = document.myform.name.value;
     var password = document.myform.password.value;
@@ -345,7 +347,133 @@ var noNameClass = () =>{
     document.write(Emp.name);
 }
 
-// Dom 
+// JS Objects - JavaScript Object by object literal
+var jsObjects1 = () =>{
+    var employee = {id:99,name:"Kong",Salary:40000};
+    document.writeln("Emp ID: "+employee.id);
+    document.writeln("Emp Name: "+employee.name);
+    document.writeln("Emp Salary: "+employee.Salary);
+    reloadPage();
+}
+
+//  By creating instance of Objects
+var jsObjects2 = () =>{
+    var emp = new Object();
+    emp.id = 1;
+    emp.name = "Hello"
+    emp.salary = 90000
+    document.writeln("Emp ID: "+emp.id);
+    document.writeln("Emp Name: "+emp.name);
+    document.writeln("Emp Salary: "+emp.salary);
+    reloadPage();
+}
+
+// By using an Object constructor
+function Employees(id,name,salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+
+var callJSObjects3 = () =>{
+    e = new Employees(101,"Rockers",90000);
+    document.writeln("Emp ID: "+e.id+"<br>");
+    document.writeln("Emp Name: "+e.name+"<br>");
+    document.writeln("Emp Salary: "+e.salary+"<br>");
+    reloadPage();
+}
+
+function emp(id,name,salary){  
+    this.id=id;  
+    this.name=name;  
+    this.salary=salary;  
+      
+    this.changeSalary=changeSalary;  
+    function changeSalary(otherId,otherName,otherSalary){  
+        this.id=otherId;
+        this.name=otherName;
+        this.salary=otherSalary;  
+    }  
+}  
+
+var EmpListFunction = () =>{
+    emp = new emp(2,"Delhi",8410);
+    document.writeln("Emp ID: "+emp.id+"<br>");
+    document.writeln("Emp Name: "+emp.name+"<br>");
+    document.writeln("Emp Salary: "+emp.salary+"<br>");
+    emp.changeSalary(28,"GReP",95000);
+    document.write("<br>");
+    document.writeln("Emp ID: "+emp.id+"<br>");
+    document.writeln("Emp Name: "+emp.name+"<br>");
+    document.writeln("Emp Salary: "+emp.salary+"<br>");
+    reloadPage();
+}
+
+// Prototype Function
+function display(firstName, lastName){
+     this.firstName = firstName;
+     this.lastName = lastName;
+}
+
+// Create Variable using prototype object
+display.prototype.company = "MNC";
+
+display.prototype.fullname = function(){
+    return this.firstName+" "+this.lastName+" "+this.company;
+}
+
+var prototypeFunction = () =>{
+    // Checked Function Names
+    var employee1=new display("Martin","Roy");  
+    var employee2=new display("Praksh","Paraman");
+    document.write(employee1.fullname()+"<br>");
+    document.write(employee2.fullname()+"<br>");
+    reloadPage();
+}
+
+// Constructors in JS
+class student{
+    constructor(){
+        this.rno = 101;
+        this.name = "Mind";
+    }
+}
+
+var constructorExample = () =>{
+    var stud = new student();
+    document.write("Student Roll No.: "+stud.rno+"<br>");
+    document.write("Student Name: "+stud.name);
+    reloadPage();
+}
+
+// Super keyword in JS
+class companyName{
+    constructor(){
+        this.company = "MNC Company";
+    }   
+}
+
+class Employe extends companyName{
+    
+    constructor(id, name){
+        super();
+        this.id = id;
+        this.name = name;
+    }
+
+}
+
+var superKeyword = () =>{
+    
+    var eMp = new Employe(189, "WER");
+    document.write("Employee ID: "+eMp.id+"<br>");
+    document.write("Employee Name: "+eMp.name+"<br>");
+    document.write("Employee Company: "+eMp.company+"<br>");
+    reLoadPage();
+
+}
+
+// DOM 
 var documentObjectModel = () => {
     getbyID()
     getbyname()
@@ -369,6 +497,7 @@ var getbytagname = () => {
     var totalpara = document.getElementsByTagName("p")
     alert("There are total " + totalpara.length + " paragraphs")
 }
+
 var innerhtmlfunc = () => {
     var para = document.getElementById("myp").innerHTML
     var mylist = document.getElementById("myList").innerHTML
@@ -408,6 +537,7 @@ function setcookie(){
         alert("Cookie set as: "+document.cookie)
     }
 }
+
 function delcookie() {
     document.cookie=document.cookie+";max-age=0";  
 }
