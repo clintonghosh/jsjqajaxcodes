@@ -415,6 +415,7 @@ function display(firstName, lastName){
      this.lastName = lastName;
 }
 
+// Create Variable using prototype object
 display.prototype.company = "MNC";
 
 display.prototype.fullname = function(){
@@ -428,6 +429,48 @@ var prototypeFunction = () =>{
     document.write(employee1.fullname()+"<br>");
     document.write(employee2.fullname()+"<br>");
     reloadPage();
+}
+
+// Constructors in JS
+class student{
+    constructor(){
+        this.rno = 101;
+        this.name = "Mind";
+    }
+}
+
+var constructorExample = () =>{
+    var stud = new student();
+    document.write("Student Roll No.: "+stud.rno+"<br>");
+    document.write("Student Name: "+stud.name);
+    reloadPage();
+}
+
+// Super keyword in JS
+class companyName{
+    constructor(){
+        this.company = "MNC Company";
+    }   
+}
+
+class Employe extends companyName{
+    
+    constructor(id, name){
+        super();
+        this.id = id;
+        this.name = name;
+    }
+
+}
+
+var superKeyword = () =>{
+    
+    var eMp = new Employe(189, "WER");
+    document.write("Employee ID: "+eMp.id+"<br>");
+    document.write("Employee Name: "+eMp.name+"<br>");
+    document.write("Employee Company: "+eMp.company+"<br>");
+    reLoadPage();
+
 }
 
 // DOM 
@@ -454,6 +497,7 @@ var getbytagname = () => {
     var totalpara = document.getElementsByTagName("p")
     alert("There are total " + totalpara.length + " paragraphs")
 }
+
 var innerhtmlfunc = () => {
     var para = document.getElementById("myp").innerHTML
     var mylist = document.getElementById("myList").innerHTML
@@ -493,6 +537,7 @@ function setcookie(){
         alert("Cookie set as: "+document.cookie)
     }
 }
+
 function delcookie() {
     document.cookie=document.cookie+";max-age=0";  
 }
