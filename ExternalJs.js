@@ -279,6 +279,8 @@ var historyObjects = () => {
     history.go(2);
 }
 
+// Form Validation
+
 var validateForm = () =>{
     var name = document.myform.name.value;
     var password = document.myform.password.value;
@@ -345,7 +347,88 @@ var noNameClass = () =>{
     document.write(Emp.name);
 }
 
-// Dom 
+// JS Objects - JavaScript Object by object literal
+var jsObjects1 = () =>{
+    var employee = {id:99,name:"Kong",Salary:40000};
+    document.writeln("Emp ID: "+employee.id);
+    document.writeln("Emp Name: "+employee.name);
+    document.writeln("Emp Salary: "+employee.Salary);
+    reloadPage();
+}
+
+//  By creating instance of Objects
+var jsObjects2 = () =>{
+    var emp = new Object();
+    emp.id = 1;
+    emp.name = "Hello"
+    emp.salary = 90000
+    document.writeln("Emp ID: "+emp.id);
+    document.writeln("Emp Name: "+emp.name);
+    document.writeln("Emp Salary: "+emp.salary);
+    reloadPage();
+}
+
+// By using an Object constructor
+function Employees(id,name,salary){
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+
+var callJSObjects3 = () =>{
+    e = new Employees(101,"Rockers",90000);
+    document.writeln("Emp ID: "+e.id+"<br>");
+    document.writeln("Emp Name: "+e.name+"<br>");
+    document.writeln("Emp Salary: "+e.salary+"<br>");
+    reloadPage();
+}
+
+function emp(id,name,salary){  
+    this.id=id;  
+    this.name=name;  
+    this.salary=salary;  
+      
+    this.changeSalary=changeSalary;  
+    function changeSalary(otherId,otherName,otherSalary){  
+        this.id=otherId;
+        this.name=otherName;
+        this.salary=otherSalary;  
+    }  
+}  
+
+var EmpListFunction = () =>{
+    emp = new emp(2,"Delhi",8410);
+    document.writeln("Emp ID: "+emp.id+"<br>");
+    document.writeln("Emp Name: "+emp.name+"<br>");
+    document.writeln("Emp Salary: "+emp.salary+"<br>");
+    emp.changeSalary(28,"GReP",95000);
+    document.write("<br>");
+    document.writeln("Emp ID: "+emp.id+"<br>");
+    document.writeln("Emp Name: "+emp.name+"<br>");
+    document.writeln("Emp Salary: "+emp.salary+"<br>");
+    reloadPage();
+}
+
+// Prototype Function
+function display(firstName, lastName){
+     this.firstName = firstName;
+     this.lastName = lastName;
+}
+
+display.prototype.fullname = function(){
+    return this.firstName+" "+this.lastName;
+}
+
+var prototypeFunction = () =>{
+    // Checked Function Names
+    var employee1=new display("Martin","Roy");  
+    var employee2=new display("Praksh","Paraman");
+    document.write(employee1.fullname()+"<br>");
+    document.write(employee2.fullname()+"<br>");
+    reloadPage();
+}
+
+// DOM 
 var documentObjectModel = () => {
     getbyID()
     getbyname()
