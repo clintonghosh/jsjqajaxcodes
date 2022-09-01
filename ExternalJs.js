@@ -211,7 +211,7 @@ function stringExample() {
 function reloadPage() {
     const load = setTimeout(function loader() {
         location.reload()
-    }, 1000)
+    }, 3000)
 }
 
 // JS Date
@@ -463,6 +463,111 @@ class Employe extends companyName{
 
 }
 
+// Static Method in JS
+class StaticTest{
+
+    constructor(){
+        document.writeln("Invoking from Constructor: ");
+        document.writeln(StaticTest.display()+", ");
+        // Invoking Using This.
+        document.writeln(this.constructor.display()+"<br>");
+    }
+
+    show(){
+        document.writeln("Invoking from another method: ");
+        document.writeln(StaticTest.display()+"<br>");
+    }
+
+    static display(){
+        return "Static Method is Invoked1";
+    }
+
+    static display(){
+        return "Static Method is Invoked2";
+    }
+
+    static display_(){
+        return "Static Method is Invoked_";
+    }
+}
+
+class StudentTest{
+
+    constructor(){
+        var name;
+        var marks;
+    }
+
+    setName(name){ 
+        this.name = name;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    setMarks(marks){
+        if(marks<0 || marks>100){
+            alert("Invalid Marks");
+            return false;
+        }else{
+            this.marks = marks;
+            return true;
+        }
+    }
+
+    getMarks(){
+        return this.marks;
+    }
+
+}
+
+function StudentObjectDefineProperty(name, marks){
+     var s_name = name;
+     var s_marks = marks;
+
+     Object.defineProperty(this,"name",{
+        get:function(){
+            return s_name;
+        },
+        set:function(s_name){
+            this.s_name=s_name;
+        }
+     });
+
+     Object.defineProperty(this,"marks",{
+        get:function(){
+            return s_marks;
+        },
+        set:function(s_marks){
+            alert("Marks: "+s_marks);
+            if(s_marks<0 || s_marks>100){
+                alert("Enter Valid Input....!");
+            }else{
+                this.s_marks = s_marks;
+            }
+        }
+     });
+}
+
+var callStudentTest = () =>{
+    var st = new StudentTest();
+    st.setName("TimePass");
+    var status = st.setMarks(-1);
+    document.write("Name: "+st.getName()+"<br>");
+    if(status==true){
+        document.write("Marks: "+st.getMarks());
+    }
+}
+
+var callStaticMethod = () =>{
+    var sTest = new StaticTest();
+    sTest.show();
+    document.writeln(StaticTest.display_()+"<br>");
+    document.writeln(StaticTest.display());
+    //reloadPage();
+}
+
 var superKeyword = () =>{
     
     var eMp = new Employe(189, "WER");
@@ -471,6 +576,11 @@ var superKeyword = () =>{
     document.write("Employee Company: "+eMp.company+"<br>");
     reLoadPage();
 
+}
+
+var callStudentObjectDefineProperty = () =>{
+    var data = new StudentObjectDefineProperty("Hello",-20);
+    document.write("Student Name: "+data.name+"<br>Student Name: "+data.marks);
 }
 
 // DOM 
@@ -523,6 +633,7 @@ var checkstrength = () =>{
         location.reload()
     }, 6000);
 }
+
 //cookies
 // create, read, update and delete a cookie by using document.cookie property.
 function setcookie(){
