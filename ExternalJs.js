@@ -550,6 +550,41 @@ function StudentObjectDefineProperty(name, marks){
      });
 }
 
+class ExtendedDate extends Date{
+    constructor(){
+        super();
+    }
+}
+
+class Bike{
+    constructor(){
+        this.company = "Hero";
+    }
+}
+
+class Vehicle extends Bike{
+    constructor(name, price){
+        super();
+        this.name = name;
+        this.price = price;
+    }
+}
+
+function Bike(company){
+    this.company = company;
+}
+
+var callInheritance = () =>{
+    var v = new Vehicle("Honda",10000);
+    document.write("Vehile Name: "+v.name+"<br> Vehicle Price: "+v.price+"<br> Vehicle Company: "+v.company);
+}
+
+var callExtendedDateClass = () =>{
+    var ed = new ExtendedDate();
+    document.write(ed.getDate()+"-"+(ed.getMonth()+1)+"-"+ed.getFullYear());
+    reLoadPage();
+}
+
 var callStudentTest = () =>{
     var st = new StudentTest();
     st.setName("TimePass");
