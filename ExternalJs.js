@@ -570,13 +570,94 @@ class Vehicle extends Bike{
     }
 }
 
-function Bike(company){
-    this.company = company;
-}
-
 var callInheritance = () =>{
     var v = new Vehicle("Honda",10000);
     document.write("Vehile Name: "+v.name+"<br> Vehicle Price: "+v.price+"<br> Vehicle Company: "+v.company);
+}
+
+// A Prototype-based approach for Inheritance
+function bke(company){
+    this.company = company;
+}
+
+bke.prototype.getCompany = function(){
+    return this.company;
+}
+
+function Vhcle(name, price){
+    this.name = name;
+    this.price = price;
+}
+
+// Polymorphism 1
+class A{
+
+    display(){
+        document.write("Hello World");
+    }
+
+}
+
+class B extends A{
+
+}
+
+var callPolymorphism1 = () =>{
+    var b = new B();
+    b.display();
+}
+
+// Polymorphism 2
+
+class C{
+    display(){
+        document.write("Inside C");
+    }
+}
+
+class D extends C{
+    display(){
+        document.write("<br>Inside D");
+    }
+}
+
+var callPolymorphism2 = () =>{
+    var a= [new C(),new D()];
+    a.forEach(function(msg){
+        msg.display();
+    });
+}
+
+// Polymorphism 3
+class E{
+
+}
+
+E.prototype.display = function(){
+    document.write("E is Invoked <br>");
+}
+
+class F{
+
+}
+
+F.prototype.display = function(){
+    document.write("F is Invoked");
+}
+
+var callPolymorphism3 = () =>{
+    var ds = [new E(), new F()];
+
+    ds.forEach(function(msg){
+        msg.display();
+    });
+}
+
+var extendsPrototype = () =>{
+    var bk = new bke("Honda");
+    Vhcle.prototype = bk;
+    var vc = new Vhcle("Prakash",60000);
+    document.write("Company Name: "+vc.getCompany()+"<br>Username: "+vc.name+"<br>Price: "+vc.price);
 }
 
 var callExtendedDateClass = () =>{
