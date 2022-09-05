@@ -699,6 +699,21 @@ var callStudentObjectDefineProperty = () =>{
     document.write("Student Name: "+data.name+"<br>Student Name: "+data.marks);
 }
 
+// Absract Class
+function Vehic(VehicleName){
+    this.VehicleName = VehicleName;
+    throw new Error("You cannot create an instance of Abstract class");  
+}
+
+Vehic.prototype.display = function(){
+    return this.VehicleName;
+}
+
+// Call Abstract Class
+var callAbstractClass = () =>{
+    var vh = new Vehic();
+}
+
 // DOM 
 var documentObjectModel = () => {
     getbyID()
