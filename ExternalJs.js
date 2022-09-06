@@ -783,3 +783,10 @@ function setcookie(){
 function delcookie() {
     document.cookie=document.cookie+";max-age=0";  
 }
+
+// This Keyword
+var website = "JavaTpoint";
+
+var web = () =>{
+    document.write(this.website);
+}

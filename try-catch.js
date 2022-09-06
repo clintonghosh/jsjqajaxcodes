@@ -16,3 +16,14 @@ var throwSample = () =>{
         document.write("<br>Exception Message: "+e.message);
     }
 }
+
+var finallySample = () =>{
+    try{
+       throw new Error("Error Example");
+      }catch(e){
+        document.write("<br>Exception Message: "+e.message+"<br>");
+      }finally{
+        document.write("Finally Block Executed");
+      }
+
+}
