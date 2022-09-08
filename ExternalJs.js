@@ -790,3 +790,133 @@ var website = "JavaTpoint";
 var web = () =>{
     document.write(this.website);
 }
+
+// Creating an Object Named Address with variables initialized and getFullAddress Function to display details.
+var Address = {
+    company : "JavaTpoint",
+    city: "Noida",
+    state: "UP",
+
+    getFullAddress : function(){
+        return this.company+" "+this.city+" "+this.state;
+    }
+}
+
+// Fetch the details by creating a variable and calling the object method.
+var fetch = Address.getFullAddress();
+
+var this_1 = () =>{
+    document.write("Details Fetched: <br>"+fetch);
+}
+
+//  Create an Object with function getAddress -->
+var Address_1 = {
+    
+    getAddress: function(){
+          return this.company+" "+this.city+" "+this.state;
+    }
+
+}
+//  Create an Object with variables Initialized -->
+var addr = {
+    company : "MCS",
+    city : "Mumbai",
+    state : "Maharashtra"
+}
+
+//  The call() and apply() method allows us to write a method that can be used on different objects.
+var this_2 = () =>{
+    document.write("Call: "+Address_1.getAddress.call(addr));
+    document.write("<br>Bind: "+Address_1.getAddress.bind(addr));
+}
+
+var lang = "JAVA"
+
+// create function lang_name with call method
+function lang_name(call){
+    call();    // Called call Method
+}
+
+// Create an Object with variable lang and language function.
+var langs = {
+    lang: "Spanish",
+    language: function(){
+        document.write(this.lang+" is popular programming language");
+    }
+}
+
+var this_3 = () =>{
+    lang_name(langs.language);
+    lang_name(obj.language.bind(langs));
+}
+
+var consoleLog = () =>{
+    x = 10;
+    y = 15;
+    z = x+y;
+    console.log(z);
+    console.log(a); // a is not initialized.
+}
+
+var sampleDebugger = () =>{
+    x = 10;
+    y = 15;
+    z = x+y;
+    debugger;
+    console.log(z);
+    console.log(a); // a is not initialized.
+}
+
+var hoistingJS = () =>{
+    x=10;
+    document.write("X: "+x);
+    var x;
+    document.write("<br>");
+    document.write("Sum: "+sum(7,7));
+    function sum(a,b){
+        return a+b;
+    } 
+}
+
+var strictJS = () =>{
+    "use strict";
+    x=99;
+    document.write("X: "+x);
+}
+
+function addition(a,a){
+   //"use strict"
+   document.write("Addition: "+(a+a));
+}
+
+var dateComparison = () =>{
+   var d1 = new Date("2022-09-06");
+   var d2 = new Date("2022-09-07");
+   if(d1>d2){
+     alert("Greater");
+   }else{
+     alert("Smaller");
+   }
+}
+
+var getCurrentdate = () => { 
+    var d = new Date();
+    alert(d);
+}
+
+var getCurrentTime = () => { 
+    var d = new Date();
+    var d1=new Date("2019-10-10, 10:10:10"); 
+    alert(d.getTime());
+    alert(d1.getTime());
+}
+
+var formattedDate = () =>{
+    var currentDate = new Date();
+    var formattedDate = currentDate.getFullYear()+"-"+(currentDate.getMonth()+1)+"-"+currentDate.getDay();
+    alert("Formatted Date: "+formattedDate);
+}
+
+
+
+
