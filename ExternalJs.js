@@ -917,6 +917,69 @@ var formattedDate = () =>{
     alert("Formatted Date: "+formattedDate);
 }
 
+var arrayLength = () =>{
+    var arr = new Array(100,200,300,400,500);
+    document.write("Displaying Array: "+arr+"<br>");
+    document.write("Array Length: "+arr.length+"<br>");
+    arr[5] = 900;
+    document.write("Inserting Elements in an Array: "+arr.length+"<br>");
+    // Split Function
+    var str = "Welcome to the javaTpoint.com";
+    var arr1 = str.split("");
+    document.write("Array after Splitting: "+arr1+"<br>");
+    document.write("Array Length after Splitting: "+arr1.length+"<br>");
+}
+
+var alertJs = () =>{
+    alert("This is an Alert Box\n "+location.hostname);
+}
+
+var evalFunction = () =>{
+    var a = 10;var b = 15;var c = 20;
+    var add,sub,multi,multiFunc;
+    add = eval("a+b+c");
+    sub = eval("a-b-c");
+    multi = eval("a*b*c");
+    document.write("Addition: "+add+"\n Subtraction: "+sub+"\n Multiplication: "+multi);
+    eval("result = Multi(5)");
+    document.write("\n Result: "+result);
+    var x=500;
+    var str = "if(x==500){alert('500');}else{alert('Not 500')}";
+    eval(str); // Code is passed as str in eval function.
+
+    var str1 = "({fname:'Hello',lname:'World'})";
+    var obj = eval(str1);
+    document.write("<br>Firstname: "+obj.fname+"\n Lastname: "+obj.lname);
+}
+
+function Multi(a){
+    return a*a;
+}
+
+var continueKeyword = () =>{
+    for(var i=0; i<=10 ;i++){
+        if(i==5){
+            continue;
+        }else{
+            document.write("<br>I Value: "+i);
+        }
+    }
+}
+
+var getAttributeSample = () =>{
+    var info = document.getElementById("sample").getAttribute("style");
+    alert(info)
+}
+
+var hideFunc = () =>{
+    var info = document.getElementById("hider").style.display = "none";
+    var info = document.getElementById("hider1").style.visibility = "hidden";
+}
+
+var promptBoxSample = () =>{
+    var message = prompt("Enter your name","1");
+    alert("Message: "+message);
+}
 
 
 
